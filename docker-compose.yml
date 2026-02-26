@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: ava-postgres
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ava_ai
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:

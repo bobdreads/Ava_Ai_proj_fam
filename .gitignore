@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+.env.local
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+backend/backup.txt
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/settings.json
+.idea/
